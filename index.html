@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مكتبة أبو استبرق</title>
+    <style>
+        /* استيراد الخطوط من Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Amiri&family=Dancing+Script&display=swap');
+
+        body {
+            font-family: 'Amiri', serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            margin-bottom: 20px;
+            font-family: 'Amiri', serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin-left: 10px;
+        }
+        .services, .games, .gifts, .school-supplies, .comments, .login {
+            background-color: white;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            font-family: 'Amiri', serif;
+        }
+        .games {
+            background-color: #00BFFF;
+            color: white;
+        }
+        .gifts {
+            background-color: #FF69B4;
+            color: white;
+        }
+        .school-supplies {
+            background-color: #FFD700;
+            color: #00008B;
+        }
+        h2 {
+            font-family: 'Amiri', serif;
+        }
+        .service-item, .game-item, .gift-item, .school-item, .comment-item {
+            margin: 15px 0;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .item-image {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        footer {
+            margin-top: 20px;
+            padding: 10px 0;
+            background-color: #333;
+            color: white;
+            font-family: 'Amiri', serif;
+        }
+        .french-text {
+            font-family: 'Dancing Script', cursive;
+        }
+        .welcome-message {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2.5em;
+            font-weight: bold;
+            z-index: 1000;
+            animation: fadeOut 3s forwards;
+        }
+        @keyframes fadeOut {
+            0% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { opacity: 0; display: none; }
+        }
+        .login {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 200px;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .login h2 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .login input {
+            width: 90%;
+            padding: 5px;
+            margin: 5px 0;
+        }
+        .login button {
+            width: 100%;
+            padding: 5px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            .services, .games, .gifts, .school-supplies, .comments, .login {
+                width: 95%;
+            }
+            .welcome-message {
+                font-size: 1.5em;
+            }
+            .login {
+                position: static;
+                width: 80%;
+                margin: 20px auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- رسالة ترحيب -->
+    <div id="welcomeMessage" class="welcome-message">
+        أهلاً وسهلاً بك في عالم مكتبة أبو استبرق!
+    </div>
+
+    <!-- تسجيل الدخول -->
+    <section class="login">
+        <h2>تسجيل الدخول</h2>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="اسم المستخدم" required>
+            <input type="password" id="password" placeholder="كلمة المرور" required>
+            <button type="submit">دخول</button>
+        </form>
+    </section>
+
+    <header>
+        <!-- شعار المكتبة -->
+        <img src="logo.png" alt="شعار مكتبة أبو استبرق" class="logo">
+        <div>
+            <h1>مكتبة أبو استبرق</h1>
+            <p>مرحبًا بكم في مكتبة أبو استبرق لبيع الألعاب الإلكترونية والخدمات المكتبية</p>
+        </div>
+    </header>
+
+    <!-- قسم الخدمات المكتبية -->
+    <section class="services">
+        <h2>الخدمات المكتبية</h2>
+        <div class="service-item">
+            <h3>طباعة المستندات</h3>
+            <p>طباعة مستنداتك بجودة عالية وبأسعار تنافسية.</p>
+        </div>
+        <div class="service-item">
+            <h3>تصوير المستندات</h3>
+            <p>تصوير المستندات بسرعة ودقة عالية.</p>
+        </div>
+        <div class="service-item">
+            <h3>تغليف الكتب</h3>
+            <p>تغليف الكتب والمجلات لحمايتها من التلف.</p>
+        </div>
+    </section>
+
+    <!-- قسم الألعاب الإلكترونية -->
+    <section class="games">
+        <h2>الألعاب الإلكترونية</h2>
+        <div class="game-item">
+            <img src="https://via.placeholder.com/100" alt="FIFA 23" class="item-image">
+            <h3>لعبة FIFA 23</h3>
+            <p>اشتري الآن لعبة FIFA 23 بأفضل سعر.</p>
+        </div>
+        <div class="game-item">
+            <img src="https://via.placeholder.com/100" alt="Call of Duty" class="item-image">
+            <h3>لعبة Call of Duty: Modern Warfare II</h3>
+            <p>احصل على لعبة Call of Duty: Modern Warfare II مع شحن سريع.</p>
+        </div>
+        <div class="game-item">
+            <img src="https://via.placeholder.com/100" alt="Assassin's Creed" class="item-image">
+            <h3>لعبة Assassin's Creed Valhalla</h3>
+            <p>العبة Assassin's Creed Valhalla متوفرة الآن للطلب.</p>
+        </div>
+    </section>
+
+    <!-- قسم الأدوات المدرسية -->
+    <section class="school-supplies">
+        <h2>الأدوات المدرسية</h2>
+        <div class="school-item">
+            <img src="https://via.placeholder.com/100" alt="أقلام" class="item-image">
+            <h3>أقلام جافة</h3>
+            <p>أقلام جافة عالية الجودة بألوان متعددة.</p>
+        </div>
+        <div class="school-item">
+            <img src="https://via.placeholder.com/100" alt="دفاتر" class="item-image">
+            <h3>دفاتر رسم</h3>
+            <p>دفاتر رسم بجودة عالية ومناسبة للطلاب.</p>
+        </div>
+        <div class="school-item">
+            <img src="https://via.placeholder.com/100" alt="حقائب" class="item-image">
+            <h3>حقائب مدرسية</h3>
+            <p>حقائب مدرسية متينة ومريحة للطلاب.</p>
+        </div>
+    </section>
+
+    <!-- قسم الهدايا والتغليف -->
+    <section class="gifts">
+        <h2>الهدايا والتغليف</h2>
+        <div class="gift-item">
+            <h3>تغليف الهدايا</h3>
+            <p>نقدم خدمات تغليف الهدايا بأشكال وألوان جذابة.</p>
+        </div>
+        <div class="gift-item">
+            <h3>هدايا خاصة</h3>
+            <p>اختر من بين مجموعة واسعة من الهدايا الخاصة بمناسباتك.</p>
+        </div>
+    </section>
+
+    <!-- قسم تعليقات الزبائن -->
+    <section class="comments">
+        <h2>تعليقات الزبائن</h2>
+        <div class="comment-item">
+            <h3>محمد علي</h3>
+            <p>خدمة ممتازة وشحن سريع، شكرًا لكم!</p>
+        </div>
+        <div class="comment-item">
+            <h3>فاطمة أحمد</h3>
+            <p>تغليف الهدايا كان رائعًا، أنصح الجميع!</p>
+        </div>
+        <form id="commentForm">
+            <label for="comment">أضف تعليقك:</label>
+            <textarea id="comment" name="comment" required></textarea>
+            <br>
+            <button type="submit">إرسال</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>تواصل معنا: abu.istabraqlibrary@gmail.com | هاتف: 0656454151</p>
+        <p>جميع الحقوق محفوظة &copy; 2023 مكتبة أبو استبرق</p>
+    </footer>
+
+    <script>
+        // إخفاء رسالة الترحيب بعد 3 ثوانٍ
+        setTimeout(() => {
+            document.getElementById('welcomeMessage').style.display = 'none';
+        }, 3000);
+
+        // معالجة تسجيل الدخول
+        document.getElementById('loginForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('تم تسجيل الدخول بنجاح!');
+        });
+
+        // معالجة إضافة تعليق
+        document.getElementById('commentForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const comment = document.getElementById('comment').value;
+            const commentItem = document.createElement('div');
+            commentItem.classList.add('comment-item');
+            commentItem.innerHTML = `<h3>زائر جديد</h3><p>${comment}</p>`;
+            document.querySelector('.comments').insertBefore(commentItem, document.getElementById('commentForm'));
+            document.getElementById('comment').value = '';
+        });
+    </script>
+
+</body>
+</html>
